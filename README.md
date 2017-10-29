@@ -1,9 +1,12 @@
 # html-table-menu-test
 My experimental implementation of table menu with AngularJS and SCSS.
 
-## install & run
+## Setup
 ```sh
-npm i
-npm i -g gulp # If it is not installed
-gulp
+npm install
+```
+
+## Run
+```sh
+npm start
 ```

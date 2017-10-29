@@ -6,21 +6,21 @@ var browserSync = require('browser-sync');
 gulp.task('default', ['sass'], function () {
     browserSync({
         server: {
-            baseDir: './www',
+            baseDir: './docs',
             notify: false,
-            startPath: "./www/index.html"
+            startPath: "./docs/index.html"
         }
     })
 
-    gulp.watch(['./www/**']
+    gulp.watch(['./docs/**']
         , function () { runSequence('sass', 'bs-reload') });
 });
 
 // sass
 gulp.task('sass', function () {
-    return gulp.src('./www/scss/**/*.scss')
+    return gulp.src('./docs/scss/**/*.scss')
         .pipe(plugins.sass())
-        .pipe(gulp.dest('./www/css'))
+        .pipe(gulp.dest('./docs/css'))
 });
 
 gulp.task('bs-reload', function () {
