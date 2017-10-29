@@ -1,1 +1,2 @@
-# テーブルメニューのテスト
+# html-table-menu-test
+htmlによるテーブルメニューのテスト
