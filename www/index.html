@@ -1,0 +1,148 @@
+<!doctype html>
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test</title>
+    <link href="css/reset.css" rel="stylesheet">
+    <link href="css/app.css" rel="stylesheet" />
+    <script>
+        var app = angular.module('myApp', []);
+        app.controller('myController', function ($scope, myService) {
+            $scope.recommended = myService.recommended;
+            $scope.meal = myService.meal;
+            $scope.travel = myService.travel;
+            $scope.news = myService.news;
+        });
+        app.service('myService', function () {
+            this.news = [
+                {
+                    img: "./vi_3.jpg",
+                    title: "ハノイでベトナムのアートを探そう",
+                    subTitle: "選びきれないほどのベトナム伝統のアート"
+                }
+            ]
+            this.recommended = [
+                {
+                    img: "./vi_2.jpg",
+                    title: "ベトナムのオススメレストラン",
+                    subTitle: "香菜をたっぷりと使ったベトナムの美味しい料理をどうぞ"
+                },
+                {
+                    img: "./vi_4.jpg",
+                    title: "ホーチミン廟",
+                    subTitle: "ベトナム建国の父・ホーチミンの霊廟を見学"
+                }
+            ]
+
+            this.meal = [
+                {
+                    img: "./vi_1.jpg",
+                    title: "ベトナムの夜店",
+                    subTitle: "夜店で美味しいラムを体験"
+                },
+                {
+                    img: "./vi_2.jpg",
+                    title: "ベトナムのオススメレストラン",
+                    subTitle: "香菜をたっぷりと使ったベトナムの美味しい料理をどうぞ"
+                }
+            ]
+
+            this.travel = [
+                {
+                    img: "./vi_3.jpg",
+                    title: "ハノイでベトナムのアートを探そう",
+                    subTitle: "選びきれないほどのベトナム伝統のアート"
+                },
+                {
+                    img: "./vi_4.jpg",
+                    title: "ホーチミン廟",
+                    subTitle: "ベトナム建国の父・ホーチミンの霊廟を見学"
+                }
+            ]
+        });
+    </script>
+</head>
+
+<body>
+    <div ng-app="myApp">
+        <div ng-controller="myController">
+            <div class="contents">
+                <div class="table-title">
+                    <h2>NEW</h2>
+                </div>
+                <ul class="table-list">
+                    <li ng-repeat="col in news">
+                        <a href="">
+                            <div>
+                                <img ng-src="{{col.img}}">
+                            </div>
+                            <dl>
+                                <dt>{{col.title}}</dt>
+                                <dd>{{col.subTitle}}
+                                </dd>
+                            </dl>
+                        </a>
+                    </li>
+                </ul>
+                <div class="table-title">
+                    <h2>おすすめ</h2>
+                </div>
+                <ul class="table-list">
+                    <li ng-repeat="col in recommended">
+                        <a href="">
+                            <div>
+                                <img ng-src="{{col.img}}">
+                            </div>
+                            <dl>
+                                <dt>{{col.title}}</dt>
+                                <dd>{{col.subTitle}}
+                                </dd>
+                            </dl>
+                        </a>
+                    </li>
+                </ul>
+                <div class="table-title">
+                    <h2>食事</h2>
+                    <span>もっと見る ></span>
+                </div>
+                <ul class="table-list">
+                    <li ng-repeat="col in meal">
+                        <a href="">
+                            <div>
+                                <img ng-src="{{col.img}}">
+                            </div>
+                            <dl>
+                                <dt>{{col.title}}</dt>
+                                <dd>{{col.subTitle}}
+                                </dd>
+                            </dl>
+                        </a>
+                    </li>
+                </ul>
+                <div class="table-title">
+                    <h2>観光</h2>
+                    <span>もっと見る ></span>
+                </div>
+                <ul class="table-list">
+                    <li ng-repeat="col in travel">
+                        <a href="">
+                            <div>
+                                <img ng-src="{{col.img}}">
+                            </div>
+                            <dl>
+                                <dt>{{col.title}}</dt>
+                                <dd>{{col.subTitle}}
+                                </dd>
+                            </dl>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

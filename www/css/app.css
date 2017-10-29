@@ -1,0 +1,36 @@
+.contents {
+  padding-top: 16px; }
+  .contents .table-title {
+    padding: 48px 12px 0px 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    .contents .table-title h2 {
+      font-size: 24px; }
+    .contents .table-title span {
+      font-size: 12px;
+      color: #999; }
+  .contents .table-list img {
+    max-width: 60px;
+    max-height: 60px; }
+  .contents .table-list ul {
+    margin-bottom: 16px; }
+  .contents .table-list li {
+    border-bottom: 1px solid #eee; }
+  .contents .table-list a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    padding: 12px; }
+  .contents .table-list a:visited {
+    color: black; }
+  .contents .table-list dl {
+    flex: 1;
+    padding-left: 8px; }
+    .contents .table-list dl dt {
+      padding-bottom: 3px;
+      line-height: 1.1;
+      font-weight: 700; }
+    .contents .table-list dl dd {
+      font-size: 11px;
+      color: #999; }
