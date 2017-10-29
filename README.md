@@ -10,3 +10,7 @@ npm install
 ```sh
 npm start
 ```
+
+## Demo
+
+https://kabosusoba-lab.github.io/html-table-menu-test/
