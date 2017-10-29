@@ -1,2 +1,6 @@
 # html-table-menu-test
-htmlによるテーブルメニューのテスト
+
+```
+npm i
+gulp
+```
